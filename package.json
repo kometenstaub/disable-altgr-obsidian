@@ -1,7 +1,7 @@
 {
-	"name": "sample-plugin",
+	"name": "altgr-plugin",
 	"version": "0.0.0",
-	"description": "<Sample_Plugin>",
+	"description": "AltGr Plugin",
 	"main": "src/main.ts",
 	"scripts": {
 		"dev": "cross-env BUILD=dev node esbuild.mjs",
@@ -30,7 +30,7 @@
 				"section": "Bug Fixes"
 			}
 		],
-		"releaseCommitMessageFormat": "<Sample_Plugin>: {{currentTag}}"
+		"releaseCommitMessageFormat": "AltGr Plugin: {{currentTag}}"
 	},
 	"keywords": [],
 	"author": "kometenstaub",

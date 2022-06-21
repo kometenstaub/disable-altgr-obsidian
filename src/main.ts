@@ -1,34 +1,16 @@
-import { App, Plugin } from 'obsidian';
-import type { TemplateSettings } from './interfaces';
-import TemplateSettingTab from './settings';
+import { Plugin } from 'obsidian';
 
-const DEFAULT_SETTINGS: TemplateSettings = {};
-
-export default class TemplatePlugin extends Plugin {
-	//@ts-ignore
-	settings: TemplateSettings;
+export default class AltGrPlugin extends Plugin {
 
 	async onload() {
-		console.log('loading ... plugin');
+		console.log('disabling AltGR');
 
-		await this.loadSettings();
+		app.scope.register([], 'AltGraph', (evt, ctx) => {return false});
 
-		this.addSettingTab(new TemplateSettingTab(this.app, this));
 	}
 
 	onunload() {
-		console.log('unloading ... plugin');
+		console.log('reenabling AltGr');
 	}
 
-	async loadSettings() {
-		this.settings = Object.assign(
-			{},
-			DEFAULT_SETTINGS,
-			await this.loadData()
-		);
-	}
-
-	async saveSettings() {
-		await this.saveData(this.settings);
-	}
 }
