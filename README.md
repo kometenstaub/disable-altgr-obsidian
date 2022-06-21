@@ -1,6 +1,9 @@
-TODO:
+# AltGr Disabler
 
-1. `mkdir node_modules`
-2. `chattr +d node_modules`
-3. `npm install`
-4. `eslint --init`
+This plugin makes codemirror vim in Obsidian work with characters that are formed with AltGr on some layouts (e.g. `[`).
+
+It works on Linux for me.
+
+## Potential issues
+
+Unknown.
